@@ -1,20 +1,24 @@
 import java.util.Scanner;
+
 public class method {
     public static void main(String[] args) {
-    readNumber();
+        readNumber();
     }
-    static void fail(){
+
+    static void fail() {
         System.out.println("ОШИБКА! Вы ввели неправильное число, попробуй еще раз!");
     }
-    static void inputText(){
+
+    static void inputText() {
         System.out.println("Введите число в диапазоне от 10 до 100:");
     }
-    static int readNumber(){
+
+    static int readNumber() {
 
         Scanner scanner = new Scanner(System.in);
         inputText();
         int varFirst = scanner.nextInt();
-        while (varFirst <= 10 | varFirst >= 100){
+        while (varFirst <= 10 | varFirst >= 100) {
             fail();
             varFirst = scanner.nextInt();
         }
@@ -22,7 +26,7 @@ public class method {
 
         inputText();
         int varSecond = scanner.nextInt();
-        while (varSecond <= 10 | varSecond >= 100){
+        while (varSecond <= 10 | varSecond >= 100) {
             fail();
             varSecond = scanner.nextInt();
         }
@@ -30,7 +34,7 @@ public class method {
 
         inputText();
         int varThird = scanner.nextInt();
-        while (varThird <= 10 | varThird >= 100){
+        while (varThird <= 10 | varThird >= 100) {
             fail();
             varThird = scanner.nextInt();
         }
