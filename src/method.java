@@ -13,7 +13,7 @@ public class method {
         System.out.println("Введите число в диапазоне от 10 до 100:");
     }
 
-    static int readNumber() {
+    static void readNumber() {
 
         Scanner scanner = new Scanner(System.in);
         inputText();
@@ -43,7 +43,6 @@ public class method {
 
         int result = varFirst * varSecond * varThird;
         System.out.println("Результат произведения введенных чисел равен: " + result);
-        return varFirst * varSecond * varThird;
     }
 }
 
