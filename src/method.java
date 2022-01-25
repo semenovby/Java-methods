@@ -2,47 +2,25 @@ import java.util.Scanner;
 
 public class method {
     public static void main(String[] args) {
-        readNumber();
+        int firstNumber = readNumber();
+        int secondNumber = readNumber();
+        int thirdNumber = readNumber();
+        int result = firstNumber * secondNumber * thirdNumber;
+        System.out.println("Результат произведения введенных чисел равен: " + result);
     }
 
-    static void fail() {
-        System.out.println("ОШИБКА! Вы ввели неправильное число, попробуй еще раз!");
-    }
-
-    static void inputText() {
-        System.out.println("Введите число в диапазоне от 10 до 100:");
-    }
-
-    static void readNumber() {
+    static int readNumber() {
 
         Scanner scanner = new Scanner(System.in);
-        inputText();
-        int varFirst = scanner.nextInt();
-        while (varFirst <= 10 | varFirst >= 100) {
-            fail();
-            varFirst = scanner.nextInt();
+        System.out.println("Введите число в диапазоне от 10 до 100:");
+        int inputNumber = scanner.nextInt();
+        while (inputNumber <= 10 | inputNumber >= 100) {
+            System.out.println("ОШИБКА! Вы ввели неправильное число, попробуй еще раз!");
+            inputNumber = scanner.nextInt();
         }
-        System.out.println("ОТЛИЧНО! ПЕРВОЕ число равно: " + varFirst);
-
-        inputText();
-        int varSecond = scanner.nextInt();
-        while (varSecond <= 10 | varSecond >= 100) {
-            fail();
-            varSecond = scanner.nextInt();
-        }
-        System.out.println("ОТЛИЧНО! ВТОРОЕ число равно: " + varSecond);
-
-        inputText();
-        int varThird = scanner.nextInt();
-        while (varThird <= 10 | varThird >= 100) {
-            fail();
-            varThird = scanner.nextInt();
-        }
-        System.out.println("ОТЛИЧНО! ТРЕТЬЕ число равно: " + varThird);
         scanner.close();
-
-        int result = varFirst * varSecond * varThird;
-        System.out.println("Результат произведения введенных чисел равен: " + result);
+        System.out.println("ОТЛИЧНО!Вы ввели число: " + inputNumber);
+        return (inputNumber);
     }
 }
 
