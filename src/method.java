@@ -10,7 +10,6 @@ public class method {
     }
 
     static int readNumber() {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число в диапазоне от 10 до 100:");
         int inputNumber = scanner.nextInt();
@@ -18,7 +17,6 @@ public class method {
             System.out.println("ОШИБКА! Вы ввели неправильное число, попробуй еще раз!");
             inputNumber = scanner.nextInt();
         }
-        scanner.close();
         System.out.println("ОТЛИЧНО!Вы ввели число: " + inputNumber);
         return (inputNumber);
     }
