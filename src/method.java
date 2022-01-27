@@ -13,12 +13,12 @@ public class method {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число в диапазоне от 10 до 100:");
         int inputNumber = scanner.nextInt();
-        while (inputNumber <= 10 | inputNumber >= 100) {
+        while (inputNumber <= 10 || inputNumber >= 100) {
             System.out.println("ОШИБКА! Вы ввели неправильное число, попробуй еще раз!");
             inputNumber = scanner.nextInt();
         }
         System.out.println("ОТЛИЧНО!Вы ввели число: " + inputNumber);
-        return (inputNumber);
+        return inputNumber;
     }
 }
 
